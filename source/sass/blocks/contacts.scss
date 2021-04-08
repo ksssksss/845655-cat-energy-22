@@ -1,0 +1,30 @@
+.contacts {
+
+  &__wrapper {
+    padding: 28px 0;
+    @include main-wrapper;
+    display: flex;
+  }
+
+  &__invite {
+    @include set-font(16px, 18px);
+    text-transform: uppercase;
+    color: #111111;
+  }
+
+  &__address {
+    max-width: 140px;
+    @include secondary-font;
+    @include set-font(14px, 20px);
+  }
+
+  &__map {
+    width: 320px;
+    height: 362px;
+    background-image: url(../img/location.jpg);
+
+    & iframe {
+      border: none;
+    }
+  }
+}

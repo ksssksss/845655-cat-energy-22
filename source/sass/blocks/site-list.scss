@@ -1,0 +1,14 @@
+.site-list {
+
+  &__item {
+    padding: 22px 0 23px;
+  border-bottom: 1px solid #E6E6E6;
+  }
+
+  &__item-link {
+    color: &basic-black;
+  }
+
+  &__item--active {
+  }
+}

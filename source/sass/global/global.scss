@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.main-header {
+  padding: 11px 20px 12px;
+  @include main-wrapper;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  color: inherit;
+  font: inherit;
+  text-transform: uppercase;
+  display: block;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
