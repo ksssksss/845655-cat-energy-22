@@ -1,19 +1,20 @@
 .copyright {
   width: 100%;
+}
 
-  &__link {
-    display: flex;
-    align-items: center;
-  }
+.copyright__link {
+  display: flex;
+  align-items: center;
+}
 
-  &__title {
-    @include secondary-font;
-    @include set-font(16px, 18.4px);
-    margin-right: auto;
-  }
+.copyright__title {
+  @include set-font(16px, 18.4px);
+  margin-right: auto;
+  font-family: $secondary-font;
+  color: $special-dark-grey;
+}
 
-  &__logo {
-    width: 27px;
-    height: 34px;
-  }
+.copyright__logo {
+  width: 27px;
+  height: 34px;
 }

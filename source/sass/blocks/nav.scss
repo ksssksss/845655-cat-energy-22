@@ -1,16 +1,45 @@
 .nav {
-  @include main-font;
   @include set-font(20px, 20px, 500);
-  color: $basic-black;
+  font-family: $main-font;
   text-transform: uppercase;
+}
 
-  &__toggle {
-    width: 24px;
-    height: 16px;
+.nav__toggle {
+  position: absolute;
+  content: "";
+  top: 23px;
+  right: 3px;
+  width: 24px;
+  height: 16px;
+}
+
+.nav__list {
+  @include reset-list-styles;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav__list-item {
+  text-align: center;
+  padding: 22px 0 23px;
+  border-bottom: 1px solid #e6e6e6;
+
+  &--active {
+    border-bottom: 2px solid $basic-green;
+  }
+}
+
+.nav__list-item-link {
+  color: $basic-black;
+
+  &:hover {
+    color: rgba($basic-black, 0.6);
   }
 
-  &__list {
-    width: 100%;
-    border-top: 1px solid #E6E6E6;
+  &:active {
+    color: rgba($basic-black, 0.3);
   }
 }

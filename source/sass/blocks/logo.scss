@@ -1,5 +1,14 @@
 .logo {
+  margin: $main-wrapper;
+  display: inline-block;
+  padding: 12px 0 23px;
 
-  &__img {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
+// .logo__img {}

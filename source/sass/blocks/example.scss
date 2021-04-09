@@ -1,58 +1,59 @@
 .example {
   background-color: $special-grey-example;
+}
 
-  &__title {
-    @include main-wrapper;
-    @include set-font(36px, 40px);
-    padding-top: 27px;
-    padding-bottom: 33px;
-  }
+.example__title {
+  @include set-font(36px, 40px);
+  margin: $main-wrapper;
+  padding-top: 27px;
+  padding-bottom: 33px;
+}
 
-  &__text {
-    @include main-wrapper;
-    @include secondary-font;
-  }
+.example__text {
+  margin: $main-wrapper;
+  font-family: $secondary-font;
+  color: $special-dark-grey;
+}
 
-  &__list {
-    padding: 25px 0;
-    @include main-wrapper;
-    display: flex;
-    justify-content: space-between;
-  }
+.example__list {
+  margin: $main-wrapper;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
-  &__item {
-    width: 124px;
-    height: 55px;
-    text-align: center;
-    border: 1px solid $special-grey;
-    border-radius: 4px;
-  }
+.example__item {
+  width: 124px;
+  height: 55px;
+  text-align: center;
+  border: 1px solid $special-grey;
+  border-radius: 4px;
+}
 
-  &__result {
-    margin-top: 15px;
-    margin-bottom: 9px;
-    @include set-font(24px, 24px);
-    text-transform: uppercase;
-  }
+.example__result {
+  @include set-font(24px, 24px);
+  margin-top: 15px;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
 
-  &__description {
-    width: 80px;
-    margin: 0 auto;
-    @include set-font(12px, 12px);
-    @include secondary-font;
-    color: $special-dark-grey;
-    background-color: $special-grey-example;
-  }
+.example__description {
+  @include set-font(12px, 12px);
+  width: 80px;
+  margin: 0 auto;
+  font-family: $secondary-font;
+  color: $special-dark-grey;
+  background-color: $special-grey-example;
+}
 
-  &__total-text {
-    @include set-font (14px, 20px);
-    text-align: center;
-    text-transform: uppercase;
-  }
+.example__total-text {
+  @include set-font (14px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  &__form-slider {
-    margin-top: 47px;
-    padding-bottom: 25px;
-    background-color: inherit;
-  }
+.example__form-slider {
+  margin-top: 47px;
+  padding-bottom: 25px;
+  background-color: inherit;
 }

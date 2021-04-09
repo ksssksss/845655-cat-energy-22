@@ -1,23 +1,23 @@
 .footer {
-  @include main-wrapper;
+  margin: $main-wrapper;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  &__logo {
-    padding-top: 39px;
-    padding-bottom: 31px;
-    text-align: center;
-    border-bottom: 1px solid #D9D9D9;
-    width: 100%;
-  }
+.footer__logo {
+  padding-top: 39px;
+  padding-bottom: 31px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+}
 
-  &__socials {
-    border-bottom: 1px solid #D9D9D9;
-    width: 100%;
-  }
+.footer__socials {
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+}
 
-  &__copyright {
-    padding: 22px 0;
-  }
+.footer__copyright {
+  padding: 22px 0;
 }
