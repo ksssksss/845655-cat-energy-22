@@ -1,0 +1,66 @@
+.benefits {
+  margin: $main-wrapper;
+}
+
+.benefits__title {
+  @include set-font(26px, 40px);
+}
+
+.benefits__list {
+  @include reset-list-styles;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits__item {
+  position: relative;
+  height: 60px;
+  margin-bottom: 20px;
+
+  &--leaf::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon-leaf.svg") center no-repeat $basic-green;
+  }
+
+  &--tub::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon-tub.svg") center no-repeat $basic-green;
+  }
+
+  &--eat::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon-eat.svg") center no-repeat $basic-green;
+  }
+
+  &--alarm::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon-alarm.svg") center no-repeat $basic-green;
+  }
+}
+
+.benefits__item-description {
+  font-family: $secondary-font;
+  color: $special-dark-grey;
+  margin: 0;
+  padding-left: 80px;
+}

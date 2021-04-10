@@ -1,0 +1,19 @@
+// .socials {}
+.socials__list {
+  @include reset-list-styles;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials__item {
+  margin-right: 36px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// .socials__link {}

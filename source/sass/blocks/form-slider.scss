@@ -1,0 +1,33 @@
+// .form-slider {}
+// .form-slider__cat-image {}
+.form-slider__wrapper {
+  margin: 0 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-slider__button {
+  @include set-font(16px, 20px);
+  font-family: $main-font;
+  color: $basic-black;
+  border: none;
+  text-transform: uppercase;
+}
+
+.form-slider__scale {
+  align-self: center;
+  width: 84px;
+  height: 14px;
+  background-color: $basic-white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.form-slider__bar {
+  margin: 4px 8px;
+  width: 50%;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: inherit;
+}
+// .form-slider__toggle {}
