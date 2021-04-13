@@ -48,12 +48,14 @@
 
 .example__total-text {
   @include set-font (14px, 20px);
+  @include reset-indents;
+  padding-top: 8px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .example__form-slider {
-  margin-top: 47px;
+  margin-top: 42px;
   padding-bottom: 25px;
   background-color: inherit;
 }

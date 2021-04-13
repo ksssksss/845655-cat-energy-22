@@ -1,7 +1,7 @@
 // .form-slider {}
 // .form-slider__cat-image {}
 .form-slider__wrapper {
-  margin: 0 45px;
+  margin: 29px 57px 9px;
   display: flex;
   justify-content: space-between;
 }
@@ -19,7 +19,7 @@
   width: 84px;
   height: 14px;
   background-color: $basic-white;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $special-grey;
   border-radius: 6px;
 }
 
@@ -27,7 +27,7 @@
   margin: 4px 8px;
   width: 50%;
   height: 6px;
-  background-color: #68b738;
+  background-color: $basic-green;
   border-radius: inherit;
 }
 // .form-slider__toggle {}

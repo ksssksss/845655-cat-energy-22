@@ -1,0 +1,62 @@
+.extra {
+  margin: $main-wrapper;
+  position: relative;
+}
+
+.extra__title {
+  @include set-font (24px, 24px);
+  @include reset-indents;
+  padding-top: 25px;
+  padding-bottom: 36px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    right: -20px;
+    top: 40px;
+    height: 3px;
+    background-image: url("../img/title-line.svg");
+  }
+}
+
+.extra__list {
+  @include reset-list-styles;
+}
+
+.extra__item {
+  border-bottom: 1px solid $special-grey;
+  padding-top: 12px;
+  padding-bottom: 18px;
+
+  &:first-child {
+    border-top: 1px solid $special-grey;
+  }
+}
+
+.extra__item-title {
+  @include set-font (16px, 16px);
+  @include reset-indents;
+  text-transform: uppercase;
+  color: $special-dark-grey2;
+}
+
+.extra__description-wrapper {
+  @include reset-indents;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: $secondary-font;
+  color: $special-dark-grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra__description-content {
+  @include reset-indents;
+}
+
+.extra__button {
+  padding: 11px 0;
+  color: $basic-white;
+  background-color: $basic-green;
+}

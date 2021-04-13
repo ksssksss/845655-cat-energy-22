@@ -1,9 +1,13 @@
 .benefits {
   margin: $main-wrapper;
+  padding-bottom: 22px;
 }
 
 .benefits__title {
-  @include set-font(26px, 40px);
+  @include set-font(36px, 40px);
+  @include reset-indents;
+  padding-top: 9px;
+  padding-bottom: 37px;
 }
 
 .benefits__list {

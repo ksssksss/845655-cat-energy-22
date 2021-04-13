@@ -1,3 +1,9 @@
+.contacts {
+  &--bg-grey {
+    background-color: $basic-grey;
+  }
+}
+
 .contacts__wrapper {
   padding: 28px 0;
   margin: $main-wrapper;
@@ -5,13 +11,15 @@
 }
 
 .contacts__invite {
-  @include set-font(16px, 18px);
+  @include set-font(16px, 20px);
+  @include reset-indents;
   text-transform: uppercase;
-  color: #111111;
+  color: $special-dark-black;
 }
 
 .contacts__address {
   @include set-font(14px, 20px);
+  @include reset-indents;
   max-width: 140px;
   font-family: $secondary-font;
   color: $special-dark-grey;
