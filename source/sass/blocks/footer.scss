@@ -1,4 +1,8 @@
 .footer {
+  background-color: $basic-grey;
+}
+
+.footer__wrapper {
   margin: $main-wrapper;
   display: flex;
   flex-direction: column;
@@ -6,18 +10,21 @@
 }
 
 .footer__logo {
-  padding-top: 39px;
-  padding-bottom: 31px;
+  padding-top: 37px;
+  padding-bottom: 29px;
   text-align: center;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid $grey-line;
   width: 100%;
 }
 
 .footer__socials {
-  border-bottom: 1px solid #d9d9d9;
+  padding-top: 20px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $grey-line;
   width: 100%;
 }
 
 .footer__copyright {
   padding: 22px 0;
+  width: 100%;
 }

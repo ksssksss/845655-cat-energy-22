@@ -1,0 +1,27 @@
+.gift {
+  margin: $main-wrapper;
+  margin-top: 39px;
+  margin-bottom: 34px;
+  background: $basic-green url("../img/gift-photo-mobile.png") top no-repeat;
+  text-align: center;
+
+  position: relative;
+}
+
+.gift__description {
+  @include set-font(16px, 20px);
+  color: $basic-white;
+  font-family: $secondary-font;
+  padding-top: 186px;
+  padding-bottom: 43px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    top: 58px;
+    left: 101px;
+    background-image: url("../img/icon-gift.svg");
+  }
+}

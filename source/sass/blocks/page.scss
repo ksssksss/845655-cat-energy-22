@@ -5,3 +5,14 @@
 }
 
 //.page__main {}
+
+.page__main-title {
+  @include set-font(36px, 36px);
+  margin: $main-wrapper;
+  margin-top: 27px;
+  margin-bottom: 37px;
+}
+
+.page__footer {
+  // width: 320px;
+}
