@@ -38,15 +38,5 @@
 
 .intro__button {
   margin: $main-wrapper;
-  background-color: $basic-green;
   padding: 11px 0;
-
-  &:hover {
-    background-color: $basic-green2;
-  }
-
-  &:active {
-    background-color: $basic-green2;
-    color: rgba($basic-white, 0.3);
-  }
 }

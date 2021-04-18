@@ -15,4 +15,18 @@
   }
 }
 
-// .socials__link {}
+.socials__link {
+  &:hover path {
+    fill: $basic-green;
+  }
+
+  &:active path {
+    fill: $basic-green;
+    opacity: 0.3;
+  }
+
+  &--fb:hover path {
+    fill: none;
+    stroke: $basic-green;
+  }
+}

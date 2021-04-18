@@ -1,11 +1,17 @@
-.copyright {
-  //box-sizing: content-box;
-}
+// .copyright {}
 
 .copyright__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:hover path {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__title {
