@@ -1,5 +1,20 @@
 .example {
   background-color: $special-grey-example;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__content-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 40%;
+  }
 }
 
 .example__title {
@@ -7,12 +22,43 @@
   margin: $main-wrapper;
   padding-top: 27px;
   padding-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(60px, 60px);
+    margin: $tablet-main-wrapper;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+  }
 }
 
 .example__text {
   margin: $main-wrapper;
   font-family: $secondary-font;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(16px, 24px);
+    margin: $tablet-main-wrapper;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.example__container {
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-left: 110px;
+  }
 }
 
 .example__list {
@@ -20,6 +66,15 @@
   padding: 25px 0;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 52%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .example__item {
@@ -28,6 +83,12 @@
   text-align: center;
   border: 1px solid $special-grey;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 77px;
+    border-radius: 5px;
+  }
 }
 
 .example__result {
@@ -35,6 +96,11 @@
   margin-top: 15px;
   margin-bottom: 9px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include set-font (30px, 37px);
+    margin-bottom: 16px;
+  }
 }
 
 .example__description {
@@ -44,6 +110,12 @@
   font-family: $secondary-font;
   color: $special-dark-grey;
   background-color: $special-grey-example;
+
+  @media (min-width: $tablet-width) {
+    @include set-font (14px, 14px);
+    width: 140px;
+    background-color: $basic-white;
+  }
 }
 
 .example__total-text {
@@ -52,10 +124,28 @@
   padding-top: 8px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include set-font (20px, 20px);
+    margin: auto 0;
+    text-align: end;
+    width: 25%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    text-align: start;
+  }
 }
 
 .example__form-slider {
   margin-top: 42px;
   padding-bottom: 25px;
   background-color: inherit;
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin: 0;
+    margin-right: 110px;
+  }
 }

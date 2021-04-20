@@ -1,37 +1,62 @@
 .programs {
   margin: $main-wrapper;
   margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+  }
 }
 
 .programs__list {
   @include reset-list-styles;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
   margin-bottom: 20px;
+  padding: 30px 20px 19px;
   background-color: $basic-grey;
-}
+  position: relative;
 
-.programs__item-wrapper {
-  margin: $main-wrapper;
+  @media (min-width: $tablet-width) {
+    padding: 77px 52px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
+// .programs__item-wrapper {}
 
 .programs__title-item {
   @include set-font(24px, 37px);
   margin: 0;
-  padding: 30px 0 29px 71px;
+  padding-left: 71px;
+  padding-bottom: 29px;
   text-transform: uppercase;
-  position: relative;
 
   &--slim::before {
     position: absolute;
     content: "";
     width: 50px;
     height: 53px;
-    left: 2px;
-    top: 21px;
+    left: 21px;
+    top: 22px;
     background-image: url("../img/slim-icon.svg");
     background-repeat: no-repeat;
   }
@@ -41,26 +66,75 @@
     content: "";
     width: 67px;
     height: 50px;
-    left: -7px;
+    left: 13px;
     top: 24px;
     background-image: url("../img/pro-item.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include set-font(36px, 36px);
+    padding-left: 0;
+
+    &--slim::before {
+      width: 200px;
+      height: 211px;
+      top: 50%;
+      left: 68%;
+      transform: translateY(-50%);
+      background-size: cover;
+    }
+
+    &--pro::before {
+      width: 268px;
+      height: 200px;
+      top: 50%;
+      left: 60%;
+      transform: translateY(-50%);
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+
+    &--slim::before {
+      width: 100px;
+      height: 106px;
+      left: 52px;
+      top: 97px;
+    }
+
+    &--pro::before {
+      width: 134px;
+      height: 100px;
+      left: 33px;
+      top: 97px;
+    }
   }
 }
 
 .programs__description {
   margin: 0;
-  padding-right: 13px;
   padding-bottom: 23px;
   font-family: $secondary-font;
   color: $special-dark-grey;
   border-bottom: 1px solid $grey-line;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(16px, 24px);
+    width: 60%;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90%;
+  }
 }
 
 .programs__link {
   @include set-font (16px, 16px);
   padding-top: 18px;
-  padding-bottom: 22px;
   display: inline-block;
   color: inherit;
   text-transform: uppercase;
@@ -90,5 +164,9 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include set-font(20px, 30px);
   }
 }

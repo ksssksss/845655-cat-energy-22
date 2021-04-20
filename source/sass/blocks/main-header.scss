@@ -1,4 +1,14 @@
 .main-header {
   position: relative;
-  width: 320px;
+  min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+  }
 }

@@ -1,3 +1,8 @@
+// Breakpoints
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 // Colors
 $basic-background: #e5e5e5;
 $basic-black: #000000;
@@ -9,6 +14,7 @@ $special-grey: #cdcdcd;
 $special-grey2: #ebebeb;
 $special-grey3: #666666;
 $special-grey4: #bababa;
+$special-grey5: #dcdcdc;
 $special-grey-example: #eaeaea;
 $special-dark-grey: #444444;
 $special-dark-grey2: #222222;
@@ -17,12 +23,14 @@ $status_error: #ff8282;
 $grey-line: #d9d9d9;
 $special-middle-white: #e7e7e7;
 
-// fonts
+// Fonts
 $main-font: "oswald", arial, sans-serif;
 $secondary-font: arial, sans-serif;
 
-// margins
+// Margins
 $main-wrapper: 0 20px;
+$tablet-main-wrapper: 0 30px;
+$desktop-main-wrapper: 0 110px;
 
 // shadows
 $shadow-color: #c4c4c4;

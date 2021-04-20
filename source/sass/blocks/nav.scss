@@ -1,7 +1,17 @@
 .nav {
   @include set-font(20px, 20px, 500);
   font-family: $main-font;
+  color: $basic-black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(18px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include set-font(20px, 30px);
+    color: $basic-white;
+  }
 }
 
 .nav__toggle {
@@ -11,6 +21,10 @@
   right: 3px;
   width: 24px;
   height: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -20,6 +34,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    min-width: 440px;
+    flex-direction: row;
+    border: none;
+  }
 }
 
 .nav__list-item {
@@ -27,13 +47,24 @@
   padding: 22px 0 23px;
   border-bottom: 1px solid $special-grey2;
 
-  &--active {
-    border-bottom: 2px solid $basic-green;
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 
 .nav__list-item-link {
-  color: $basic-black;
+  color: inherit;
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      padding: 5px;
+      border-bottom: 2px solid $basic-green;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $basic-white;
+    }
+  }
 
   &:hover {
     color: rgba($basic-black, 0.6);

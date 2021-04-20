@@ -3,7 +3,6 @@
 .copyright__link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   &:hover path {
     fill: $basic-green;
@@ -15,10 +14,15 @@
 }
 
 .copyright__title {
-  @include set-font(16px, 18.4px);
+  @include set-font(16px, 18px);
   margin-right: auto;
   font-family: $secondary-font;
   color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+    margin-left: auto;
+  }
 }
 
 .copyright__logo {
