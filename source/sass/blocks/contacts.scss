@@ -4,14 +4,14 @@
   }
 }
 
-.contacts__wrapper {
+.contacts__container {
   padding: 28px 0;
   margin: $main-wrapper;
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     margin: 0 72px;
-    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {

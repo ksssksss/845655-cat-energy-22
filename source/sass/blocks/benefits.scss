@@ -24,11 +24,9 @@
 
 .benefits__list {
   @include reset-list-styles;
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }

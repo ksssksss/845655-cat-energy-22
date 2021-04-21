@@ -13,11 +13,9 @@
 
 .programs__list {
   @include reset-list-styles;
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
   }
 }
@@ -168,5 +166,15 @@
 
   @media (min-width: $tablet-width) {
     @include set-font(20px, 30px);
+
+    &::after {
+      top: 28px;
+      right: -15px;
+    }
+
+    &:hover::after {
+      top: 28px;
+      right: -15px;
+    }
   }
 }

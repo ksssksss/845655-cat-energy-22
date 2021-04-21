@@ -1,7 +1,9 @@
 .main-header {
-  position: relative;
-  min-width: 320px;
+  //position: relative;
+  //min-width: 320px;
+}
 
+.main-header__container {
   @media (min-width: $tablet-width) {
     margin: $tablet-main-wrapper;
     display: flex;

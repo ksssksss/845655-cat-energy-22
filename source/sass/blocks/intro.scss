@@ -41,6 +41,10 @@
   }
 }
 
+.intro__container {
+  position: relative;
+}
+
 .intro__title {
   @include set-font(36px, 36px);
   margin: 0;
