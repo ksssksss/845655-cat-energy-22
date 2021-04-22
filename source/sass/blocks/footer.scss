@@ -7,6 +7,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+  }
 }
 
 .footer__logo {
@@ -23,6 +33,11 @@
   &:active {
     opacity: 0.6;
   }
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+    border: none;
+  }
 }
 
 .footer__socials {
@@ -30,6 +45,12 @@
   padding-bottom: 19px;
   border-bottom: 1px solid $grey-line;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding-top: 55px;
+    padding-bottom: 61px;
+  }
 }
 
 .footer__copyright {

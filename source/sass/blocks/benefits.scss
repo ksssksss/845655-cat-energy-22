@@ -1,6 +1,14 @@
 .benefits {
   margin: $main-wrapper;
   padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+  }
 }
 
 .benefits__title {
@@ -8,12 +16,20 @@
   @include reset-indents;
   padding-top: 9px;
   padding-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(60px, 60px);
+  }
 }
 
 .benefits__list {
   @include reset-list-styles;
-  display: flex;
-  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .benefits__item {
@@ -60,6 +76,88 @@
     left: 0;
     background: url("../img/icon-alarm.svg") center no-repeat $basic-green;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 45%;
+    min-height: 227px;
+    margin-bottom: 37px;
+
+    &--leaf::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--tub::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--eat::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--alarm::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf::after {
+      @include set-font(280px, 280px);
+      font-family: $main-font;
+      position: absolute;
+      content: "1";
+      width: 112px;
+      height: 280px;
+      top: -35px;
+      left: 125px;
+      color: $basic-grey;
+      z-index: -1;
+    }
+
+    &--tub::after {
+      @include set-font(280px, 280px);
+      font-family: $main-font;
+      position: absolute;
+      content: "2";
+      width: 134px;
+      height: 280px;
+      top: -35px;
+      left: 125px;
+      color: $basic-grey;
+      z-index: -1;
+    }
+
+    &--eat::after {
+      @include set-font(280px, 280px);
+      font-family: $main-font;
+      position: absolute;
+      content: "3";
+      width: 134px;
+      height: 280px;
+      top: -35px;
+      left: 125px;
+      color: $basic-grey;
+      z-index: -1;
+    }
+
+    &--alarm::after {
+      @include set-font(280px, 280px);
+      font-family: $main-font;
+      position: absolute;
+      content: "4";
+      width: 136px;
+      height: 280px;
+      top: -35px;
+      left: 125px;
+      color: $basic-grey;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+  }
 }
 
 .benefits__item-description {
@@ -67,4 +165,10 @@
   color: $special-dark-grey;
   margin: 0;
   padding-left: 80px;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(16px, 24px);
+    padding: 135px 0 41px;
+    width: 245px;
+  }
 }

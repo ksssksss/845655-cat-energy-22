@@ -4,6 +4,15 @@
   margin: 29px 57px 9px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin: 29px 94px 9px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .form-slider__button {
@@ -12,6 +21,16 @@
   color: $basic-black;
   border: none;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    &:first-child {
+      margin-right: 24px;
+    }
+
+    &:last-child {
+      margin-left: 24px;
+    }
+  }
 }
 
 .form-slider__scale {
@@ -21,6 +40,13 @@
   background-color: $basic-white;
   border: 1px solid $special-grey;
   border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 6px;
+    background-color: $special-grey5;
+    border: none;
+  }
 }
 
 .form-slider__bar {
@@ -29,5 +55,35 @@
   height: 6px;
   background-color: $basic-green;
   border-radius: inherit;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
-// .form-slider__toggle {}
+
+.form-slider__toggle {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $basic-green;
+    border: 12px solid $basic-white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px $special-grey5,
+      0 1px 3px $special-grey5;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 2px $special-grey5,
+        0 2px 4px $special-grey5;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px $basic-green,
+        0 3px 5px $special-grey5;
+    }
+  }
+}
