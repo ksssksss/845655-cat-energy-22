@@ -15,6 +15,25 @@
   margin: $main-wrapper;
   margin-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    @include set-font(60px, 60px);
+    margin: $tablet-main-wrapper;
+
+    &--form {
+      margin-top: 65px;
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+
+    &--form {
+      margin-top: 77px;
+      margin-bottom: 56px;
+    }
+  }
 }
 
 // .page__footer {}
