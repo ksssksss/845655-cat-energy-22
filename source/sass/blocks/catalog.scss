@@ -4,10 +4,19 @@
   @include reset-list-styles;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: $tablet-main-wrapper;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: $desktop-main-wrapper;
+  }
 }
 
 .catalog__list-item {
-  width: 320px;
+  width: 100%;
   padding: 23px 20px;
   border-bottom: 1px solid $special-grey2;
   display: grid;
@@ -22,6 +31,41 @@
 
   &:first-child {
     border-top: 1px solid $special-grey2;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 36px 40px;
+    margin-bottom: 60px;
+    width: 45.5%;
+    height: 511px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background: linear-gradient(to top, $basic-grey 84%, $basic-white 16%);
+
+    &--show {
+      padding: 161px 36px 40px;
+      height: 429px;
+      background: none;
+      align-self: flex-end;
+      border: 1px solid $basic-grey;
+      justify-content: flex-end;
+    }
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+    margin-right: 80px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -42,8 +86,33 @@
     width: 30px;
     height: 30px;
     top: 25px;
-    left: 145px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url("../img/plus.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    @include set-font(20px, 24px);
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+
+    &--show {
+      padding-bottom: 23px;
+      width: 55%;
+    }
+
+    &--show::before {
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--show {
+      width: 80%;
+    }
   }
 }
 
@@ -59,17 +128,39 @@
   font-family: $secondary-font;
   color: $special-dark-grey;
   width: 100%;
+  text-align: center;
 
   &--show {
     color: $special-dark-grey;
     width: max-content;
     margin: 0 auto;
   }
+
+  @media (min-width: $tablet-width) {
+    @include set-font(16px, 18px);
+
+    &--show {
+      padding-bottom: 87px;
+      width: 70%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--show {
+      width: 100%;
+    }
+  }
 }
 
 .catalog__item-desc-row {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $special-grey;
+  }
 }
 
 .catalog__item-desc-data {

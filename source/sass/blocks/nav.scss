@@ -11,7 +11,10 @@
 
   @media (min-width: $desktop-width) {
     @include set-font(20px, 30px);
-    color: $basic-white;
+
+    &--index {
+      color: $basic-white;
+    }
   }
 }
 
