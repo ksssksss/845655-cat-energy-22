@@ -1,6 +1,7 @@
 .nav {
   @include set-font(20px, 20px, 500);
   font-family: $main-font;
+  min-width: 200px;
   color: $basic-black;
   text-transform: uppercase;
   position: relative;
@@ -18,29 +19,23 @@
   }
 }
 
-.nav__toggle {
-  position: absolute;
-  content: "";
-  top: -35px;
-  right: 3px;
-  width: 24px;
-  height: 16px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .nav__list {
   @include reset-list-styles;
   border-top: 1px solid $special-grey2;
 
   @media (min-width: $tablet-width) {
-    min-width: 440px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border: none;
+  }
+}
+
+.nav--closed .nav__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
   }
 }
 
@@ -58,14 +53,8 @@
   color: inherit;
 
   &--active {
-    @media (min-width: $tablet-width) {
-      padding: 5px;
-      border-bottom: 2px solid $basic-green;
-    }
-
-    @media (min-width: $desktop-width) {
-      border-bottom: 2px solid $basic-white;
-    }
+    padding: 5px;
+    border-bottom: 2px solid $basic-green;
   }
 
   &:hover {
@@ -75,4 +64,66 @@
   &:active {
     color: rgba($basic-black, 0.3);
   }
+
+  @media (min-width: $desktop-width) {
+    &--index {
+      border-bottom: 2px solid $basic-white;
+    }
+  }
+}
+
+
+.nav__toggle {
+  // display: block;
+  position: absolute;
+  border: none;
+  background-color: $basic-white;
+  top: -43px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav--closed .nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: $basic-black;
+  box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
+}
+
+.nav--opened .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 1.5px;
+    height: 25px;
+    background-color: $basic-black;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
+.nav--nojs .nav__list {
+  display: block;
 }

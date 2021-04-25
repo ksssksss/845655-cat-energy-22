@@ -16,23 +16,22 @@
       linear-gradient(to top, rgba($basic-green, 0.85), rgba($basic-green, 0.85)),
       url("../img/index-background-desktop.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
 
     @media (min-width: $tablet-width) {
       background-image: none;
     }
 
-    // @media (min-width: $desktop-width) {
-    //   top: -75px;
-    //   left: 300px;
-    //   transform: translateX(75%);
-    //   z-index: -1;
-    //   height: 694px;
-    //   width: 50%;
-    //   background-image:
-    //     linear-gradient(to top, rgba($basic-green, 0.85), rgba($basic-green, 0.85)),
-    //     url("../img/index-background-desktop.jpg");
-    //   background-repeat: no-repeat;
-    // }
+    @media (min-width: $desktop-width) {
+      top: -75px;
+      left: 100%;
+      transform: translateX(-100%);
+      height: 696px;
+      width: 50%;
+      background-image:
+        linear-gradient(to top, rgba($basic-green, 0.85), rgba($basic-green, 0.85)),
+        url("../img/index-background-desktop.jpg");
+    }
   }
 
   @media (min-width: $tablet-width) {
