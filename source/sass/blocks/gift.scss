@@ -8,11 +8,14 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    // margin: $tablet-main-wrapper;
+    height: 200px;
+    background-size: cover;
+    background-position-y: center;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    height: 289px;
   }
 }
 
