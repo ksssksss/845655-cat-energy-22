@@ -5,9 +5,11 @@
   color: $basic-black;
   text-transform: uppercase;
   position: relative;
+  border-bottom: 1px solid $grey-line;
 
   @media (min-width: $tablet-width) {
     @include set-font(18px, 24px);
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,6 +48,11 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    margin-right: 37px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -78,8 +85,8 @@
   position: absolute;
   border: none;
   background-color: $basic-white;
-  top: -43px;
-  right: 20px;
+  top: -46px;
+  right: 22px;
   width: 24px;
   height: 24px;
 

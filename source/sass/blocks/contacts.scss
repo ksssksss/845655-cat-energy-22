@@ -6,6 +6,8 @@
 
 .contacts__container {
   padding: 28px 0;
+  height: 114px;
+  box-sizing: border-box;
   margin: $main-wrapper;
   display: flex;
   justify-content: space-between;
@@ -34,6 +36,7 @@
   @include reset-indents;
   text-transform: uppercase;
   color: $special-dark-black;
+  width: 44%;
 
   @media (min-width: $tablet-width) {
     @include set-font(20px, 21px);
