@@ -1,6 +1,6 @@
 .extra {
   margin: $main-wrapper;
-  // position: relative;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin: $tablet-main-wrapper;
@@ -8,28 +8,6 @@
 
   @media (min-width: $desktop-width) {
     margin: $desktop-main-wrapper;
-  }
-}
-
-.extra__container {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 80%;
-    right: 0;
-    top: 40px;
-    height: 3px;
-    background-image: url("../img/title-line.svg");
-  }
-
-  @media (min-width: $tablet-width) {
-    &::after {
-      width: 100%;
-      top: 46px;
-    }
   }
 }
 
@@ -42,26 +20,24 @@
   padding-bottom: 36px;
   background-color: $basic-white;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   z-index: -1;
-  //   width: 100%;
-  //   right: -20px;
-  //   top: 40px;
-  //   height: 3px;
-  //   background-image: url("../img/title-line.svg");
-  // }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 8000px;
+    top: 40px;
+    height: 3px;
+    background-image: url("../img/title-line.svg");
+  }
 
   @media (min-width: $tablet-width) {
     @include set-font(36px, 36px);
     padding-left: 36px;
 
-    // &::before {
-    //   top: 45px;
-    //   width: 110%;
-    //   right: -30px;
-    //}
+    &::before {
+      top: 45px;
+      right: -100vh;
+    }
   }
 }
 
