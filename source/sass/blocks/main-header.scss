@@ -8,6 +8,7 @@
     margin: $tablet-main-wrapper;
     display: flex;
     justify-content: space-between;
+    align-content: center;
   }
 
   @media (min-width: $desktop-width) {

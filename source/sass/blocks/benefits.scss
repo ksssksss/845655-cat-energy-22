@@ -8,6 +8,7 @@
 
   @media (min-width: $desktop-width) {
     margin: $desktop-main-wrapper;
+    padding-bottom: 27px;
   }
 }
 
@@ -19,6 +20,8 @@
 
   @media (min-width: $tablet-width) {
     @include set-font(60px, 60px);
+    padding-top: 15px;
+    padding-bottom: 72px;
   }
 }
 
@@ -80,7 +83,13 @@
   @media (min-width: $tablet-width) {
     width: 45%;
     min-height: 227px;
-    margin-bottom: 37px;
+    margin-bottom: 90px;
+    margin-right: 5px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 37px;
+    }
 
     &--leaf::before {
       width: 80px;
@@ -157,6 +166,20 @@
 
   @media (min-width: $desktop-width) {
     width: 20%;
+    margin-bottom: 0;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.benefits__item--alarm br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -168,7 +191,7 @@
 
   @media (min-width: $tablet-width) {
     @include set-font(16px, 24px);
-    padding: 135px 0 41px;
+    padding: 112px 0 41px;
     width: 245px;
   }
 }
