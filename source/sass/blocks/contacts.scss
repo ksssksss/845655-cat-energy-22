@@ -14,6 +14,8 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 72px;
+    padding: 60px 0;
+    min-height: 201px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,7 +23,7 @@
     padding: 0 72px;
     position: absolute;
     content: "";
-    bottom: 105px;
+    bottom: 106px;
     left: 110px;
     width: 570px;
     height: 201px;
@@ -39,7 +41,7 @@
   width: 44%;
 
   @media (min-width: $tablet-width) {
-    @include set-font(20px, 21px);
+    @include set-font(20px, 28px);
     width: 170px;
   }
 
@@ -64,6 +66,14 @@
   @media (min-width: $desktop-width) {
     text-align: start;
     margin: auto 0;
+  }
+}
+
+.contacts__address br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
