@@ -14,7 +14,13 @@
     <header class="main-header">
       <div class="container">
         <div class="main-header__container">
-          <a class="logo" href="#"><img class="logo__img" src="img/logo-mobile.svg" width="181" height="38" alt=""></a>
+          <a class="logo" href="#">
+            <picture>
+              <source media="(min-width:1440px)" type="image/svg+xml" srcset="img/logo-desktop.svg">
+              <source media="(min-width:768px)" type="image/svg+xml" srcset="img/logo-tablet.svg">
+              <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Cat Energy: перейти на главную страницу">
+            </picture>
+          </a>
 
           <nav class="nav nav--closed nav--nojs">
             <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -145,7 +151,7 @@
         <div class="container">
           <div class="contacts__container">
             <p class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</p>
           </div>
         </div>
         <div class="contacts__map">
