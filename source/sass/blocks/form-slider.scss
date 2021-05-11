@@ -1,11 +1,12 @@
 // .form-slider {}
+
 .form-slider__slider-wrapper {
   margin: 29px 57px 9px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    margin: 0 94px 9px;
+    margin: 0 99px 9px;
     position: relative;
   }
 
@@ -16,10 +17,10 @@
 
 .form-slider__cat-image {
   display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     height: 535px;
-    justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -44,33 +45,16 @@
 
 .form-slider__button {
   @include set-font(16px, 20px);
+  padding: 0;
   font-family: $main-font;
   color: $basic-black;
   border: none;
   text-transform: uppercase;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     @include set-font(20px, 30px);
-
-    &:first-child {
-      margin-right: 15px;
-    }
-
-    &:last-child {
-      margin-left: 15px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0;
-
-    &:first-child {
-      margin-right: 24px;
-    }
-
-    &:last-child {
-      margin-left: 24px;
-    }
+    border-bottom: 1px dotted #d9d9d9;
   }
 }
 
@@ -87,6 +71,11 @@
     height: 6px;
     background-color: $special-grey5;
     border: none;
+    margin: 0 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 24px;
   }
 }
 
@@ -113,7 +102,8 @@
     background-color: $basic-green;
     border: 12px solid $basic-white;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px $special-grey5,
+    box-shadow:
+      0 0 0 1px $special-grey5,
       0 1px 3px $special-grey5;
     cursor: pointer;
 

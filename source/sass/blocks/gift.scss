@@ -1,21 +1,36 @@
 .gift {
-  margin-top: 39px;
+  margin-top: 38px;
   margin-bottom: 34px;
-  background: $basic-green url("../img/gift-photo-mobile.png") top no-repeat;
+  background: $basic-green url("../img/gift-photo-mobile.jpg") center no-repeat;
+  background-size: cover;
   text-align: center;
   height: 289px;
 
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
+    margin-top: 68px;
+    background-image: url("../img/gift-photo-tablet.jpg");
     height: 200px;
-    background-size: cover;
-    background-position-y: center;
+    // background-position-y: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     height: 289px;
+    background-image: url("../img/gift-photo-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
@@ -38,17 +53,17 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 70px 0 70px 65%;
+    padding: 70px 0 70px 60%;
     text-align: start;
 
     &::before {
-      left: 101px;
+      left: 118px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    padding-top: 184px;
+    padding-top: 171px;
     text-align: center;
 
     &::before {
