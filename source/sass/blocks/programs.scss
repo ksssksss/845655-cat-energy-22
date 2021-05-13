@@ -161,13 +161,7 @@
   }
 
   &:hover::after {
-    position: absolute;
-    content: "";
     width: 32px;
-    height: 12px;
-    top: 21px;
-    right: -15px;
-    transform: translateX(100%);
     background-image: url("../img/arrow-icon-active.svg");
   }
 
@@ -182,11 +176,6 @@
     &::after {
       top: 9px;
       right: -25px;
-    }
-
-    &:hover::after {
-      top: 28px;
-      right: -15px;
     }
   }
 }

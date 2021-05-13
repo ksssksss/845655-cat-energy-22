@@ -104,7 +104,8 @@
     border: 1px solid $special-grey;
   }
 
-  &:focus {
+  &:focus,
+  &:active {
     outline: 2px solid $special-dark-grey;
     outline-offset: -2px;
 
@@ -118,7 +119,7 @@
     }
   }
 
-  &:invalid {
+  &:focus:invalid {
     outline: 2px solid $status_error;
     outline-offset: -2px;
 
@@ -241,7 +242,8 @@
 }
 
 .program-form__radio-input:focus + .program-form__radio-label::before {
-  border: 1px solid $basic-green;
+  outline: 2px solid $special-dark-grey;
+  outline-offset: -2px;
 }
 
 .program-form__contact-info {
@@ -476,6 +478,11 @@
   }
 }
 
+.program-form__checkbox-input:focus + .program-form__checkbox-label::before {
+  outline: 2px solid $special-dark-grey;
+  outline-offset: -2px;
+}
+
 .program-form__checkbox-input:checked + .program-form__checkbox-label::before {
   position: absolute;
   content: "";
@@ -496,8 +503,6 @@
 .program-form__checkbox-input:hover + .program-form__checkbox-label::before {
   position: absolute;
   content: "";
-  width: 28px;
-  height: 28px;
   top: -5px;
   left: 0;
   border: 1px solid $special-grey4;
@@ -506,8 +511,6 @@
 .program-form__checkbox-input:checked:hover + .program-form__checkbox-label::before {
   position: absolute;
   content: "";
-  width: 28px;
-  height: 28px;
   top: -5px;
   left: 0;
   border: 1px solid $special-grey4;
