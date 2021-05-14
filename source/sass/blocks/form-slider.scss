@@ -52,9 +52,24 @@
   text-transform: uppercase;
   background-color: transparent;
 
+  &:focus {
+    outline: 2px solid $special-dark-grey;
+    outline-offset: -2px;
+  }
+
   @media (min-width: $tablet-width) {
     @include set-font(20px, 30px);
-    border-bottom: 1px dotted #d9d9d9;
+    border-bottom: 1px dotted $grey-line;
+
+    &:hover {
+      border-bottom: 1px solid $basic-black;
+    }
+
+    &:active,
+    &:focus {
+      border-bottom: none;
+      outline: none;
+    }
   }
 }
 
