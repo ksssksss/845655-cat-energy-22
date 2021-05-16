@@ -1,18 +1,4 @@
 // .copyright {}
-
-.copyright__link {
-  display: flex;
-  align-items: center;
-
-  &:hover path {
-    fill: $basic-green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
 .copyright__title {
   @include set-font(16px, 18px);
   margin-right: auto;
@@ -25,7 +11,19 @@
   }
 }
 
-.copyright__logo {
-  width: 27px;
-  height: 34px;
+.copyright__icon {
+  fill: $special-dark-grey;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+
+  &:hover .copyright__icon {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -83,6 +83,7 @@
   }
 }
 
+
 .program-form__input {
   @include set-font(16px, 18px);
   width: 100%;
@@ -109,12 +110,11 @@
     outline: 2px solid $special-dark-grey;
     outline-offset: -2px;
 
-    + .program-form__phone-icon path {
+    + .program-form__icon--phone {
       fill: $basic-green;
     }
 
-    + .program-form__email-icon line,
-    +  .program-form__email-icon path {
+    + .program-form__icon--email {
       stroke: $basic-green;
     }
   }
@@ -123,12 +123,11 @@
     outline: 2px solid $status_error;
     outline-offset: -2px;
 
-    + .program-form__phone-icon path {
+    + .program-form__icon--phone {
       fill: $status_error;
     }
 
-    + .program-form__email-icon line,
-    +  .program-form__email-icon path {
+    + .program-form__icon--email {
       stroke: $status_error;
     }
   }
@@ -327,23 +326,27 @@
   }
 }
 
-.program-form__email-icon {
+.program-form__icon {
   position: absolute;
-  right: 15px;
   top: 25%;
-}
 
-.program-form__phone-icon {
-  position: absolute;
-  right: 12px;
-  top: 25%;
+  &--email {
+    fill: none;
+    stroke: $special-dark-grey2;
+    right: 15px;
+    top: 25%;
+  }
+
+  &--phone {
+    fill: $special-dark-grey2;
+    right: 12px;
+  }
 }
 
 .program-form__comment {
   @include reset-indents;
   border: none;
   margin-bottom: 21px;
-  // position: relative;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 63px;
@@ -358,7 +361,6 @@
   margin: $main-wrapper;
 
   @media (min-width: $tablet-width) {
-    // margin: $tablet-main-wrapper;
     margin: $tablet-form-wrapper;
     margin-right: 67px;
   }
