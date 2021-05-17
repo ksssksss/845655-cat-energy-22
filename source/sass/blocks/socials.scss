@@ -14,18 +14,25 @@
     margin-right: 0;
   }
 }
+.socials__icon {
+  fill: $special-grey3;
 
+  &--fb {
+    fill: none;
+    stroke: $special-grey3;
+  }
+}
 .socials__link {
-  &:hover path {
+  &:hover .socials__icon {
     fill: $basic-green;
   }
 
-  &:active path {
+  &:active .socials__icon {
     fill: $basic-green;
     opacity: 0.3;
   }
 
-  &--fb:hover path {
+  &:hover .socials__icon--fb {
     fill: none;
     stroke: $basic-green;
   }
