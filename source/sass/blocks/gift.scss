@@ -4,7 +4,7 @@
   background: $basic-green url("../img/gift-photo-mobile.jpg") center no-repeat;
   background-size: cover;
   text-align: center;
-  height: 289px;
+  height: auto;
 
   position: relative;
 
@@ -19,6 +19,7 @@
     // background-position-y: center;
 
     @media (min-resolution: 2dppx) {
+      min-height: 289px;
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }

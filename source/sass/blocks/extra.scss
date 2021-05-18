@@ -24,10 +24,10 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 8000px;
+    width: 600vh;
     top: 40px;
     height: 3px;
-    background-image: url("../img/title-line.svg");
+    background-color: $basic-green;
   }
 
   @media (min-width: $tablet-width) {
@@ -38,7 +38,7 @@
 
     &::before {
       top: 29px;
-      right: -100vh;
+      left: -100vh;
     }
   }
 
