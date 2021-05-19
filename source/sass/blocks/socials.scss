@@ -5,6 +5,10 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .socials__item {
@@ -13,14 +17,47 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 32px;
+  }
 }
 
 .socials__icon {
   fill: $special-grey3;
 
+  &--vk {
+    width: 23px;
+    height: 13px;
+  }
+
+  &--inst {
+    width: 16px;
+    height: 16px;
+  }
+
   &--fb {
+    width: 10px;
+    height: 18px;
     fill: none;
     stroke: $special-grey3;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--vk {
+      width: 29px;
+      height: 17px;
+    }
+
+    &--inst {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--fb {
+      width: 20px;
+      height: 31px;
+    }
   }
 }
 
