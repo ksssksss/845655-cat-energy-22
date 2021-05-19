@@ -31,11 +31,13 @@
 .program-form__cat-info {
   @include reset-indents;
   margin-bottom: 9px;
+  padding-bottom: 10px;
   border: none;
   border-bottom: 1px solid $grey-line;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
+    padding-bottom: 0;
     border-bottom: none;
   }
 
@@ -160,7 +162,7 @@
 .program-form__radio-list {
   list-style: none;
   margin: $main-wrapper;
-  padding: 28px 0 24px 0;
+  padding: 19px 0 24px 0;
 
   @media (min-width: $tablet-width) {
     border: 1px solid $grey-line;
@@ -262,7 +264,6 @@
 .program-form__legend {
   @include set-font(24px, 26px);
   margin: $main-wrapper;
-  // padding-top: 26px;
   margin-bottom: 38px;
   padding-right: 21px;
   background-color: $basic-white;
@@ -272,11 +273,11 @@
   &::before {
     content: "";
     position: absolute;
-    width: 8000px;
+    width: 600vh;
     top: 14px;
     height: 3px;
     z-index: -1;
-    background-image: url("../img/title-line.svg");
+    background-color: $basic-green;
   }
 
 
@@ -299,7 +300,7 @@
 
     &::before {
       top: 21px;
-      right: -100vh;
+      left: -100vh;
     }
 
     &--extra {

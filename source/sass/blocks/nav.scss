@@ -5,16 +5,18 @@
   color: $basic-black;
   text-transform: uppercase;
   position: relative;
-  border-bottom: 1px solid $grey-line;
+  border-bottom: 1px solid $special-grey2;
 
   @media (min-width: $tablet-width) {
     @include set-font(18px, 24px);
+    max-width: 75%;
     border-bottom: none;
     margin: auto 0;
   }
 
   @media (min-width: $desktop-width) {
     @include set-font(20px, 30px);
+    max-width: 50%;
 
     &--index {
       color: $basic-white;
@@ -24,7 +26,6 @@
 
 .nav__list {
   @include reset-list-styles;
-  border-top: 1px solid $special-grey2;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -45,7 +46,7 @@
 .nav__list-item {
   text-align: center;
   padding: 22px 0 23px;
-  border-bottom: 1px solid $special-grey2;
+  border-top: 1px solid $special-grey2;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -135,4 +136,11 @@
 
 .nav--nojs .nav__list {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+  }
 }

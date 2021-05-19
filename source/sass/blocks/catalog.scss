@@ -78,6 +78,7 @@
   @include reset-indents;
   text-transform: uppercase;
   width: 60%;
+  color: $special-dark-grey2;
 
   &--show {
     width: max-content;

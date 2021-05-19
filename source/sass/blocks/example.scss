@@ -7,6 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    border-top: none;
     background:
       linear-gradient(to bottom, white 29%, rgba(255, 255, 255, 0) 29%),
       linear-gradient(to right, #f2f2f2 55%, #eaeaea 55%);
@@ -162,12 +163,12 @@
 
 .example__form-slider {
   margin-top: 42px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   background-color: inherit;
 
   @media (min-width: $tablet-width) {
     margin-top: 38px;
-    padding-bottom: 60px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: $desktop-width) {
