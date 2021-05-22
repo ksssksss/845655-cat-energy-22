@@ -9,6 +9,10 @@
   @media (min-width: $tablet-width) {
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    align-items: baseline;
+  }
 }
 
 .socials__item {
@@ -45,8 +49,8 @@
 
   @media (min-width: $tablet-width) {
     &--vk {
-      width: 29px;
-      height: 17px;
+      width: 32px;
+      height: 20px;
     }
 
     &--inst {
