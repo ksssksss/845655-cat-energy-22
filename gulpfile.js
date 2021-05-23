@@ -36,21 +36,21 @@ exports.styles = styles;
 
 // Normalize Styles
 
-const stylesNormalize = () => {
-  return gulp.src("source/css/normalize.css")
-    .pipe(plumber())
-    // .pipe(sourcemap.init())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename("normalize.min.css"))
-    // .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
+// const stylesNormalize = () => {
+//   return gulp.src("source/css/normalize.css")
+//     .pipe(plumber())
+//     // .pipe(sourcemap.init())
+//     .pipe(postcss([
+//       autoprefixer(),
+//       csso()
+//     ]))
+//     .pipe(rename("normalize.min.css"))
+//     // .pipe(sourcemap.write("."))
+//     .pipe(gulp.dest("build/css"))
+//     .pipe(sync.stream());
+// }
 
-exports.stylesNormalize = stylesNormalize;
+// exports.stylesNormalize = stylesNormalize;
 
 // HTML
 
@@ -182,7 +182,6 @@ const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
-    stylesNormalize,
     html,
     scripts,
     sprite,
@@ -200,7 +199,6 @@ exports.default = gulp.series(
   copyImages,
   gulp.parallel(
     styles,
-    stylesNormalize,
     html,
     scripts,
     sprite,
