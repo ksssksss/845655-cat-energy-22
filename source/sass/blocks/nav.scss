@@ -62,17 +62,22 @@
 .nav__list-item-link {
   color: inherit;
 
-  &--active {
-    padding-bottom: 7px;
-    border-bottom: 2px solid $basic-green;
-  }
-
   &:hover {
-    color: rgba($basic-black, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
     color: rgba($basic-black, 0.3);
+  }
+
+  &--active {
+    padding-bottom: 7px;
+    border-bottom: 2px solid $basic-green;
+
+    &:hover,
+    &:active {
+      opacity: inherit;
+    }
   }
 
   @media (min-width: $desktop-width) {
